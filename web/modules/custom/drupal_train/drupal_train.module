@@ -1,0 +1,54 @@
+<?php
+
+/**
+ * @file
+ * Contains drupal_train.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function drupal_train_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the drupal_train module.
+    case 'help.page.drupal_train':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function drupal_train_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+ if($form_id == 'system_site_information_settings'){
+   $config = \Drupal::configFactory('system.site')->getEditable('system.site');
+   $form['site_api_key'] = [
+     '#type' => 'textfield',
+     '#title' => t('API Key'),
+     '#description' => t("How this is used depends on your site's theme."),
+     '#default_value' => $config->get('site_key')
+   ];
+   $form['#submit'][] = '_site_info';
+ }
+}
+
+function _site_info(&$form, \Drupal\Core\Form\FormStateInterface $form_state){
+$config = \Drupal::configFactory('system.site')->getEditable('system.site');
+$config->set('site_key', $form_state->getValue('site_api_key') );
+$config->save();
+}
+/**
+ * Implements hook_theme().
+ */
+function drupal_train_theme() {
+  return [
+    'drupal_train' => [
+      'render element' => 'children',
+    ],
+  ];
+}

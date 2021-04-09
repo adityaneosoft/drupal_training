@@ -1,0 +1,4 @@
+services:
+  drupal_crud.say_hello:
+    class: Drupal\drupal_crud\LoadData
+    arguements: ['@database']

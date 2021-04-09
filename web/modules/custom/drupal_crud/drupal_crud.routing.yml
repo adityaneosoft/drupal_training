@@ -1,0 +1,28 @@
+drupal_crud.mydata_controller_display:
+  path: '/drupal_crud'
+  defaults:
+    _controller: '\Drupal\drupal_crud\Controller\MydataController::display'
+    _title: 'display'
+  requirements:
+    _permission: 'access content'
+drupal_crud.mydata_form:
+  path: '/drupal_crud/form/drupal_crud'
+  defaults:
+    _form: '\Drupal\drupal_crud\Form\DrupalCrud'
+    _title: 'MydataForm'
+  requirements:
+    _access: 'TRUE'
+drupal_crud.display_table_controller_display:
+  path: '/drupal_crud/hello/table'
+  defaults:
+    _controller: '\Drupal\drupal_crud\Controller\DisplayTableController::display'
+    _title: 'display'
+  requirements:
+    _permission: 'access content'
+drupal_crud.delete_form:
+  path: '/drupal_crud/form/delete'
+  defaults:
+    _form: '\Drupal\drupal_crud\Form\DrupalCrudDelete'
+    _title: 'DeleteForm'
+  requirements:
+    _access: 'TRUE'

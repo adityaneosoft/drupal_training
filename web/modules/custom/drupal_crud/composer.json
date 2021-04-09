@@ -1,0 +1,13 @@
+{
+    "name": "drupal_crud",
+    "type": "drupal-module",
+    "description": "My Awesome Module",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/drupal_crud",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/drupal_crud",
+        "source": "http://cgit.drupalcode.org/drupal_crud",
+    },
+}

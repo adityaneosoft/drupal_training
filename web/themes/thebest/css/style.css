@@ -1,0 +1,67 @@
+.blog-header {
+ 
+}
+
+div.navbar{
+  background-color: cadetblue;
+}
+
+.main_logo {
+  zoom: 50%;
+}
+
+.main_site_name {
+  padding-left: 30px;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+
+a {
+  color: #fff;
+}
+
+.footer-padding {
+  padding-inline: 60px;
+}
+
+.recent-posts h3 a {
+  color: #777777;
+}
+
+.recent-posts .views-field-view-node a {
+  color: red;
+}
+
+footer{
+  color: #fff;
+  background-color: cadetblue;
+  border-radius: 10px ;
+}
+
+.navbar-right{
+  margin-right: 0px !important;
+}
+
+.field-content{
+
+}
+
+.ml-2{
+  margin-left: 10px;
+}
+
+.py-1{
+  padding: 2px 12px ;
+}
+
+body{
+  background: #845EC2;
+}
+
+.carousel-inner>.item>img{
+  width:100%  !important;
+}

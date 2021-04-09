@@ -1,0 +1,13 @@
+{
+    "name": "drupal_train",
+    "type": "drupal-module",
+    "description": "My Awesome Module",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/drupal_train",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/drupal_train",
+        "source": "http://cgit.drupalcode.org/drupal_train"
+    }
+}

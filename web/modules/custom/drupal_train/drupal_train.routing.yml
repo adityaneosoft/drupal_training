@@ -1,0 +1,39 @@
+
+drupal_train.default_controller_hello_world:
+  path: '/drupal_train/hello_world'
+  defaults:
+    _controller: '\Drupal\drupal_train\Controller\DefaultController::hello_world'
+    _title: 'hello_world'
+  requirements:
+    _permission: 'access content'
+drupal_train.default_form:
+  path: '/drupal_train/form/default'
+  defaults:
+    _form: '\Drupal\drupal_train\Form\DefaultForm'
+    _title: 'DefaultForm'
+  requirements:
+    _access: 'TRUE'
+drupal_train.config_form:
+  path: '/admin/config/drupal_train/config'
+  defaults:
+    _form: '\Drupal\drupal_train\Form\ConfigForm'
+    _title: 'ConfigForm'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+drupal_train.dynamic_route:
+  path: '/showuser/{user}'
+  defaults:
+    _controller: '\Drupal\drupal_train\Controller\DefaultController::show_user'
+    _title: 'hello_world'
+  requirements:
+    _permission: 'access content'
+    user: '^[0-9a-zA-z]+'
+drupal_train.default_request:
+  path: '/issue/{type}'
+  defaults:
+    _controller: '\Drupal\drupal_train\Controller\DefaultController::show_issue'
+    type: 'Support request'
+  requirements:
+    _access: 'TRUE'
